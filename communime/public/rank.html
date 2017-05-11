@@ -1,0 +1,15 @@
+<hr class="standard">
+<p class="standard-info">Choose everything that you want nearby</p>
+
+<div class="choices" ng-controller="rankNextController as rank">
+  <ul class="rank" data-as-sortable="rank.dragControlListeners" 
+  data-ng-model="rank.filtered" id="dragAndDrop">
+    <li data-ng-repeat="choice in rank.filtered" 
+    class="active-item as-sortable-item" data-as-sortable-item>
+        <div data-as-sortable-item-handle class="as-sortable-item-handle">{{choice.name}}</div>
+    </li>
+  </ul>
+  <a href class="advance" ng-click="rank.send();nav.setActive(3);nav.setStrikeRank(true)">
+    Next
+  </a>
+</div>  

@@ -1,0 +1,26 @@
+<div class="container-fluid progress-nav" ng-controller="NavController as nav">
+  <a href="/" ng-click="nav.setHomeNave()" class="col-md-3">
+    <div ng-class="{'active-item' : nav.activeIndex === 0, 'strike' : nav.isStrikeStart}">
+      <svg height="14" width="14"><circle cx="7" cy="7" r="6" /></svg>
+      {{nav.names[0]}}
+    </div>
+  </a>
+  <a href="/choose/" ng-click="nav.setChooseNav()" class="col-md-3">
+    <div ng-class="{'active-item' : nav.activeIndex === 1, 'strike' : nav.isStrikeChoose}">
+      <svg height="14" width="14"><circle cx="7" cy="7" r="6" /></svg>
+      {{nav.names[1]}}
+    </div>
+  </a>
+  <a href ng-click="nav.setRankNav()"  class="col-md-3">
+    <div ng-class="{'active-item' : nav.activeIndex === 2, 'strike' : nav.isStrikeRank}">
+      <svg height="14" width="14"><circle cx="7" cy="7" r="6" /></svg>
+      {{nav.names[2]}}
+    </div>
+  </a>
+  <a href ng-click="nav.setCompareNav()" class="col-md-3">
+    <div ng-class="{'active-item' : nav.activeIndex === 3, 'strike' : nav.isStrikeCompare}">
+      <svg height="14" width="14"><circle cx="7" cy="7" r="6" /></svg>
+      {{nav.names[3]}}
+    </div>
+  </a>
+</div>

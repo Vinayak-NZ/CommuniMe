@@ -1,0 +1,11 @@
+<hr class="standard">
+<p class="standard-info">Your top suburbs:</p>
+
+<div class="compare" ng-controller="topSixController as result">
+  <ul class="suburbs">
+    <li ng-repeat="suburb in result.suburbsList" id="{{suburb.suburb_id}}"
+    style="background-image:url( {{suburb.suburb_url}} )">
+      <div class="suburb-name">{{$index + 1}}. {{suburb.suburb_name_text}}</div>
+    </li>
+  </ul>
+</div>

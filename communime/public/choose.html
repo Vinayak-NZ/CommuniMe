@@ -1,0 +1,15 @@
+<hr class="standard">
+<p class="standard-info">Choose everything that you want nearby</p>
+
+<div class="choices" ng-controller="NextController as next">
+  <!-- Choosing to select listed items -->
+  <ul class="choose">
+    <li ng-repeat="choice in next.choices" ng-class="{ 'active-item': choice.active }" ng-click="next.selectItem($index)">
+        {{choice.name}}
+    </li>
+  </ul>
+  
+  <a href="/rank/" class="advance" ng-click="nav.setActive(2);nav.setStrikeChoose(true);next.clicked()">
+    Next
+  </a>
+</div>

@@ -1,0 +1,298 @@
+/* Links */
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Base structure
+ */
+
+html, body {
+  height: 100%;
+  background-color: #f8af3c;
+}
+body {
+  color: #fff;
+  text-align: center;
+  font-family: Mangal, 'Helvetica Neue', sans-serif, Arial;
+}
+
+/* 
+* App navigation at the top 
+*/
+.progress-nav  {
+  display: block;
+  background-color: #24525E;
+}
+.progress-nav div {
+  font-size: 18px !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height:100%;
+  background:#24525E;
+}
+.progress-nav div.active-item {
+  background-color: #FFE;
+  color:#24525E;
+}
+.progress-nav .strike {
+  text-decoration: line-through;
+}
+circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5;
+}
+.strike circle {
+  fill: white;
+}
+.active-item circle {
+  fill: #24525E;
+  stroke: #24525E;
+}
+
+@media (max-width: 990px) {
+  .progress-nav {
+    margin: 0;
+    padding: 0;
+  }
+  .progress-nav div, .progress-nav a {
+    padding: 0;
+    margin: 0;
+    height: inherit;
+  }
+  .progress-nav div {
+    height: 32px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
+  
+}
+
+img.start-image {
+  width: 40%;
+  height: 40%;
+  margin-top:6%;
+}
+
+.choices {
+  width:70%;
+  height:100%;
+  margin:auto; /*horizontally centers*/
+
+}
+
+/* Choose and Rank lists */
+ul.choose, ul.rank {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:0;
+  list-style-type: none;
+  text-align: center;
+}
+ul.choose div {
+  margin: 0;
+  padding: 0;
+  max-height: 36px;
+  display: block;
+}
+ul.choose{
+  margin-top:85px;
+  max-width: 780px;
+}
+ul.rank {
+  margin: auto;
+}
+
+.choose li, .advance, .rank li {
+  width: 190px;
+  height: 36px;
+  font-size: 20px !important;
+  padding-top:4px;
+  padding-bottom: 4px;
+  background:#24525E;
+  display:inline-block;
+
+  margin-bottom: 10px;
+  margin-left:2%;
+  margin-right:2%;
+  border-radius: 18px;
+
+  cursor: pointer; /*clicky hand cursor*/
+  /* prevent user from highlighting text*/
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Modern standard */      
+}
+/* Active choose and ranked items */
+.choose li.active-item, .rank li.active-item {
+  background-color: #1CB2D8 !important;
+  border: 3px solid #14829e;
+  padding-top:1px;
+}
+
+.rank li{
+  display: block;
+  width: 200px !important; /* fixed width, not relative */
+  margin: 10px auto 10px auto;
+  background-color: #14829e;
+}
+
+/* The Next button */
+.advance {
+  background: #FFF;
+  color: #000;
+  
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 5%;
+}
+a.get-started{
+  width:230px;
+}
+/* Headings and horizontal lines*/
+h1 {
+  font-family:'Helvetica Neue', sans-serif, Arial;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+hr {
+  width:530px;
+  padding:0;
+  margin:auto;
+  margin-top:-30px; /*negative margin moves it into h1 margin*/
+  margin-bottom:10px;
+}
+
+@media (max-width: 600px) {
+  hr {
+    margin-top: 20px !important;
+    width: 90%;
+  }
+  
+  ul.choose {
+    margin-top: 20px;
+  }
+  ul.choose li {
+    margin-bottom: 5px;
+  }
+}
+hr.standard {
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+.standard-info {
+  font-size:20px;
+}
+/*Suburbs display*/
+.suburbs {
+  padding-left: 0; /* override bootstrap padding */
+}
+ul.suburbs li{
+  width: 253px;
+  height: 190px;
+  font-size: 18px;
+  background: #fbcd8d;
+  display: inline-block;
+  /*suburb background-image attributes*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.suburb-buttons a{
+  width: 24%;
+  height: 32px;
+  border-radius: 16px;
+  background:#1CB2D8;
+
+  font-size: 15px;
+  padding-top:5px;
+  padding-bottom: 3px;
+
+  display:inline-block;
+  margin-top: 50%;
+  margin-bottom:2%;
+  margin-left:1%;
+  margin-right:1%;
+}
+
+ul.suburbs .suburb-name { 
+  display: block;
+  background-color: rgba(36, 82, 94, 0.7);
+  padding-top: 2px;
+  padding-bottom:2px;
+
+  font-size: 20px;
+}
+
+
+/* Template provided CSS */
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  vertical-align: top;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  width:100%;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  width:100%;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
